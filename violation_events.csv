@@ -1,0 +1,2 @@
+event_time,people_in_frame,compliant,violated,cpu_percent,gpu_percent,gpu_memory_percent,fps,frame_processing_ms,dashboard_latency_ms,camera_source
+2026-03-01 23:39:13,1,0,1,84.2,23.0,34.69,8.04,157.02,7.0,0

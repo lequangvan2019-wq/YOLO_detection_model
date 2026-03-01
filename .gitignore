@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Conda / virtualenv
+.conda/
+.venv/
+env/
+venv/
+
+# model weights & outputs
+*.pt
+*.pth
+runs/
+trained_model2/
+results.csv
+yolo11n.pt
+yolov8n.pt
+
+# other noise
+*.log
+*.tmp
+*.DS_Store

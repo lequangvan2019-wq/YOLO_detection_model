@@ -1,0 +1,8 @@
+path: C:/Users/kckes/OneDrive/Desktop/NOKIA TEMI/Yolo Detection/Safety Vests.v14-rf-detr-medium-576x576.yolov11
+train: train/images
+val: valid/images
+test: test/images
+names:
+- no_safety_vest
+- safety_vest
+nc: 2
