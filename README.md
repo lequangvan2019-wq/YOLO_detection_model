@@ -102,7 +102,6 @@ Vest-person association: Geometric overlap matching (IoU-based) to determine if 
 Smooth bounding boxes: Exponential moving average (factor=0.85) eliminates box flickering
 Track aging: Tracks fade out after 40 frames of no detection with visual fade effect
 Unique person counting: Separate counters for compliant vs. violated individuals
-
 ⚡ GPU Optimization
 FP16 half-precision inference on CUDA GPUs (~2× speedup)
 cuDNN benchmark auto-tuning for optimal convolution algorithms
@@ -114,14 +113,12 @@ MQTT over TLS (HiveMQ Cloud, port 8883) for real-time telemetry publishing
 MQTT subscriber built into GUI for dashboard message logging
 HTTP POST to Flask dashboard (/api/update) every 1 second
 Auto-reconnect on RTSP stream failure (3 retries with backoff)
-
 🖥️ User Interface (PyQt6)
 Dark-themed desktop GUI with live video feed
 Real-time overlays: corner-style bounding boxes, tracking info panel, system stats
 Green = SAFE (has vest), Red = VIOLATION (no vest)
 RTSP connection testing and preset management
 Auto-save violation images to disk with cooldown
-
 📊 Web Dashboard (Flask)
 Real-time KPI cards: people in frame, compliant, violated, FPS, CPU/GPU usage
 Violation event table with timestamps
@@ -132,8 +129,6 @@ Prerequisites
 Python 3.9+
 NVIDIA GPU with CUDA support (recommended)
 RTSP camera source (optional — webcam also supported)
-
-
 Setup
 # Clone the repository
 git clone https://github.com/lequangvan2019-wq/YOLO_detection_model.git
