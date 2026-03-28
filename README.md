@@ -1,8 +1,8 @@
-# 🦺 Real-Time AI Safety Vest Detection System
+# Real-Time AI Safety Vest Detection System
 
 A production-grade PPE (Personal Protective Equipment) compliance monitoring system built for Nokia 5G Futures Lab. Uses dual YOLO models with smooth tracking, MQTT telemetry over TLS, and a real-time web dashboard — designed for deployment on 5G-connected edge devices with Nokia 360° cameras.
 
-## 📋 Table of Contents
+## Table of Contents
 - [Overview](#overview)
 - [System Architecture](#system-architecture)
 - [How It Works](#how-it-works)
@@ -114,27 +114,27 @@ YOLO_detection_model/
 - **Track aging**: Tracks fade out after 40 frames of no detection with visual fade effect
 - **Unique person counting**: Separate counters for compliant vs. violated individuals
 
-### ⚡ GPU Optimization
+### GPU Optimization
 - **FP16 half-precision inference** on CUDA GPUs (~2× speedup)
 - **cuDNN benchmark auto-tuning** for optimal convolution algorithms
 - **90% GPU memory allocation** for maximum throughput
 - **Periodic VRAM cleanup** every 100 frames via `torch.cuda.empty_cache()`
 - **Multi-threaded RTSP capture** with producer-consumer queue (buffer size = 1)
 
-### 📡 Communication & IoT
+### Communication & IoT
 - **MQTT over TLS** (HiveMQ Cloud, port 8883) for real-time telemetry publishing
 - **MQTT subscriber** built into GUI for dashboard message logging
 - **HTTP POST** to Flask dashboard (`/api/update`) every 1 second
 - **Auto-reconnect** on RTSP stream failure (3 retries with backoff)
 
-### 🖥️ User Interface (PyQt6)
+### User Interface (PyQt6)
 - Dark-themed desktop GUI with live video feed
 - Real-time overlays: corner-style bounding boxes, tracking info panel, system stats
 - Green = SAFE (has vest), Red = VIOLATION (no vest)
 - RTSP connection testing and preset management
 - Auto-save violation images to disk with cooldown
 
-### 📊 Web Dashboard (Flask)
+### Web Dashboard (Flask)
 - Real-time KPI cards: people in frame, compliant, violated, FPS, CPU/GPU usage
 - Violation event table with timestamps
 - CSV export of violation history
